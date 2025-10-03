@@ -1,0 +1,130 @@
+/* GENERAL STYLING */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e3;
+    color: #333;
+}
+
+h1, h2 {
+    color: #d35400;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    background-color: #f39c12;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 20px;
+    min-height: 80vh;
+}
+
+/* MENU ITEMS */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff3e0;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* BUTTONS */
+button, a.button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, a.button:hover {
+    background-color: #d35400;
+}
+
+/* TABLE STYLING (Cart & Checkout) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f39c12;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #fff8f0;
+}
+
+/* CART TOTAL */
+p strong {
+    font-size: 18px;
+}
+
+/* FORMS */
+form input, form select, form textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form label {
+    font-weight: bold;
+}
+
+/* ADMIN DASHBOARD LINKS */
+ul li a {
+    display: inline-block;
+    margin-top: 5px;
+}

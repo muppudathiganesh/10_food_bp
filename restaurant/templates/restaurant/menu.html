@@ -1,0 +1,16 @@
+{% extends 'restaurant/base.html' %}
+  {% load static %}
+{% block content %}
+<h2>Menu</h2>
+<ul>
+    {% for item in items %}
+    <li>
+        <strong>{{ item.name }}</strong> - ₹{{ item.price }}<br>
+        {{ item.description }}<br>
+        <a href="{% url 'add_to_cart' item.id %}">Add to Cart</a>
+    </li>
+    {% empty %}
+    <li>No items available</li>
+    {% endfor %}
+</ul>
+{% endblock %}

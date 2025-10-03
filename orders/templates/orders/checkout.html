@@ -1,0 +1,28 @@
+{% extends 'restaurant/base.html' %}
+  {% load static %}
+{% block content %}
+<h2>Checkout</h2>
+{% if items %}
+<form method="POST">
+    {% csrf_token %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>₹{{ item.subtotal }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><strong>Total: ₹{{ total }}</strong></p>
+    <button type="submit">Place Order</button>
+</form>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}
