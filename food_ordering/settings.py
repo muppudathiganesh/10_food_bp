@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^ru8ck)hzb-14)jt&((*1@-v$00-j29@$!4@w+1m=8g6*fcm!b'
+# SECRET_KEY = 'django-insecure-^ru8ck)hzb-14)jt&((*1@-v$00-j29@$!4@w+1m=8g6*fcm!b'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'food_ordering.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+      'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': 'food_db',
         'USER': 'root',
         'PASSWORD': '123',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
