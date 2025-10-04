@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'food_db',
         'USER': 'root',
         'PASSWORD': '123',
-        'HOST': 'https://one0-food-bp.onrender.com/',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
