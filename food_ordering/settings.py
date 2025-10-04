@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-^ru8ck)hzb-14)jt&((*1@-v$00-j29@$!4@w+1m=8g6*fcm!b'
+ SECRET_KEY = 'django-insecure-^ru8ck)hzb-14)jt&((*1@-v$00-j29@$!4@w+1m=8g6*fcm!b'
 import os
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "unsafe-default-key")
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'food_db',
         'USER': 'root',
         'PASSWORD': '123',
-        'HOST': 'localhost',
+        'HOST': 'https://one0-food-bp.onrender.com/',
         'PORT': '3306',
     }
 }
